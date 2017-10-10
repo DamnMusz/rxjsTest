@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-xs-12 container">
+    <div *ngIf="params && params.length>0">
+      <div *ngIf="ejemplos && ejemplos.length>0; else loading">
+          <h3>Estos son los ejemplos</h3>
+          <div *ngFor="let ejemplo of ejemplos">
+              {{ejemplo.data}}
+          </div>
+      </div>
+      <ng-template #loading>Cargando ejemplos...</ng-template>
+    </div>
+  </div>
+</div>

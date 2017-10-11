@@ -5,6 +5,7 @@ import { reducers } from './reducers';
 
 import { AppComponent } from './app.component';
 import { EjemploComponent } from './ejemplo/ejemplo.component';
+import { EjemploService } from './ejemplo.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { EjemploComponent } from './ejemplo/ejemplo.component';
     BrowserModule,
     StoreModule.forRoot(reducers)
   ],
-  providers: [],
+  providers: [
+    EjemploService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

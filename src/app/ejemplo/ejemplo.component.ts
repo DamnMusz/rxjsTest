@@ -8,6 +8,7 @@ import { Ejemplo } from '../models/Ejemplo'
 })
 export class EjemploComponent implements OnInit {
   @Input() params: string;
+  @Input() buscadosEjemplos: boolean;
   @Input() ejemplos: Ejemplo[];
 
   constructor() { }

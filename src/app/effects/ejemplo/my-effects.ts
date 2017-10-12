@@ -5,8 +5,8 @@ import { Effect, Actions } from '@ngrx/effects';
 import { Observable } from 'rxjs/Observable';
 import { Action } from '@ngrx/store';
 
-import { EjemploService } from './ejemplo.service';
-import * as MyActions from './my-actions';
+import { EjemploService } from '../../services/ejemplo/ejemplo.service';
+import * as MyActions from '../../actions/ejemplo/my-actions';
 
 @Injectable()
 export class EjemploEffects {

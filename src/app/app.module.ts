@@ -6,9 +6,9 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers } from './reducers';
 
 import { AppComponent } from './app.component';
-import { EjemploComponent } from './ejemplo/ejemplo.component';
-import { EjemploService } from './ejemplo.service';
-import { EjemploEffects } from './my-effects';
+import { EjemploComponent } from './components/ejemplo/ejemplo.component';
+import { EjemploService } from './services/ejemplo/ejemplo.service';
+import { EjemploEffects } from './effects/ejemplo/my-effects';
 
 @NgModule({
   declarations: [

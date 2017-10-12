@@ -1,4 +1,4 @@
-import * as fromAction from './my-reducer';
+import * as fromAction from './reducers/ejemplo/my-reducer';
 
 export interface State {
     action: fromAction.State;

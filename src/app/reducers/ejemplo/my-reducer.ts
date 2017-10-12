@@ -1,5 +1,5 @@
-import { Ejemplo } from './models/ejemplo';
-import * as MyActions from './my-actions';
+import { Ejemplo } from '../../models/ejemplo/ejemplo';
+import * as MyActions from '../../actions/ejemplo/my-actions';
 
 export interface State {
     actionParams: string;

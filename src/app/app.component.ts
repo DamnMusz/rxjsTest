@@ -1,8 +1,8 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, Subscriber } from 'rxjs';
-import { Ejemplo } from './models/Ejemplo';
-import * as MyActions from './my-actions';
+import { Ejemplo } from './models/ejemplo/Ejemplo';
+import * as MyActions from './actions/ejemplo/my-actions';
 import * as fromRoot from './reducers';
 
 @Component({

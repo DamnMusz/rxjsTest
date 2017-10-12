@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subscriber } from 'rxjs';
-import { Ejemplo } from './models/Ejemplo';
+import { Ejemplo } from '../../models/ejemplo/Ejemplo';
 
 @Injectable()
 export class EjemploService {

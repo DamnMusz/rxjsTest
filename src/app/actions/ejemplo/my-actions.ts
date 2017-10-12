@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { Ejemplo } from './models/ejemplo';
+import { Ejemplo } from '../../models/ejemplo/ejemplo';
 
 export const ACTION_PERFORMED = '[Ejemplos] Pressed';
 export const ACTION_SUCCESS = '[Ejemplos] Pressed Success';

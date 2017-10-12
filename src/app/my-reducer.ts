@@ -19,6 +19,7 @@ export function reducer(state = initialState, action: MyActions.All): State {
             return {
                 ...state,
                 buscadosEjemplos: true,
+                results: [],
                 actionParams: action.payload
             }
         }

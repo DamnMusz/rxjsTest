@@ -1,3 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 @import './styles/sidebar.scss';
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import './styles/buttons.scss';
+
+.text-white {
+    color: #FFFFFF;
+}
+
+body {
+    background-color: #EEEEEE;
+}
+
+.text-accent {
+    color: #F44336;
+}
+
+.text-black {
+    color: #424242;
+}
+
+.no-margin {
+    margin: 0;
+}

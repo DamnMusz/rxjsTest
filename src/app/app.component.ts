@@ -32,13 +32,13 @@ export class AppComponent {
   private _opened: boolean = false;
   private _modeNum: number = 0;
   private _positionNum: number = 0;
-  private _dock: boolean = true;
+  private _dock: boolean = false;
   private _closeOnClickOutside: boolean = true;
   private _closeOnClickBackdrop: boolean = false;
   private _showBackdrop: boolean = false;
   private _animate: boolean = true;
   private _trapFocus: boolean = true;
-  private _autoFocus: boolean = true;
+  private _autoFocus: boolean = false;
   private _keyClose: boolean = true;
   private _autoCollapseHeight: number = null;
   private _autoCollapseWidth: number = null;

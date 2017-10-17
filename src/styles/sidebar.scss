@@ -3,6 +3,10 @@
 @import './utils/variables.scss';
 @import './utils/core.scss';
 
+.ng-sidebar-container {
+  height: 100vh;
+}
+
 .loading {
   padding: 1em;
 }
@@ -46,11 +50,12 @@ demo {
   }
 
 .demo-sidebar {
-  background-color: #fff;
+  background-color: #FAFAFA;
   padding: 2em 1em;
-  box-shadow: 0 20px 20px 0 rgba(0,0,0,.84);
-  min-width: 14%;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,.44);
+  min-width: 25em;
   font-size: 0.8em;
+  background-image: url('../assets/img/sidebar-background.png');
 
   &.ng-sidebar--opened.ng-sidebar--over {
     box-shadow: 0 0 2.5em rgba(85, 85, 85, 0.5);
@@ -73,4 +78,53 @@ demo {
     background-color: $dark-grey;
     color: $white;
   }
+}
+
+nav .brand-logo, nav .menu-icon {
+  color: #9E9E9E;
+}
+
+nav {
+  // background-color: #F44336;
+  background-color: #EEEEEE;
+  box-shadow: none;
+  z-index: 9999;
+}
+
+.ng-sidebar__content--animate[_ngcontent-c1] {
+  padding: 0!important;
+}
+
+.menu-route {
+  margin: 5px;
+  padding: 10px;
+  font-size: 1.3rem;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+
+.menu-route:hover {
+  background-color: #F44336;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.menu-icon {
+    font-weight: bold;
+    color: #FFFFFF;
+    vertical-align:bottom;
+    padding-right: 0.5em;
+}
+
+.menu-btn {
+    width: 100%;
+    text-align: right;
+}
+
+.route-icon {
+  color: inherit;
+}
+
+.route-icon:hover {
+  color: #FFFFFF;
 }

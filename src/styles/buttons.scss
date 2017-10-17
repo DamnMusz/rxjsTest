@@ -1,0 +1,16 @@
+.btn-red:focus, .btn-red:hover {
+    background-color: #D32F2F;
+}
+
+.btn-red {
+    background-color: #F44336;
+}
+
+.btn, .btn-large, .btn-flat {
+    padding: 0 1rem;
+}
+
+.btn-flat:focus, .btn-flat:active, .btn-flat:hover {
+    background-color: transparent;
+    outline: none;
+}

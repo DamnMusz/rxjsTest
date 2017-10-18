@@ -13,6 +13,7 @@ import * as fromRoot from './reducers';
 })
 export class AppComponent {
   title = 'app';
+  showMenu: boolean = false;
   params: Observable<string>;
   ejemplos: Observable<Ejemplo[]>;
   buscadosEjemplos: Observable<boolean>;
@@ -27,6 +28,18 @@ export class AppComponent {
 
   cargarEjemplos(params: string): void {
     this.store.dispatch(new MyActions.MyAction('myParams'));
+  }
+
+  toogleMenu() {
+    this.showMenu = !this.showMenu;
+  }
+
+  openNav() {
+    document.getElementById("myNav").style.height = "100%";
+  }
+
+  closeNav() {
+    document.getElementById("myNav").style.height = "0%";
   }
 
   private _opened: boolean = false;

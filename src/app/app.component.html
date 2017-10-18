@@ -1,58 +1,87 @@
-<ng-sidebar-container>
-    <ng-sidebar
-      [(opened)]="_opened"
-      [mode]="_MODES[_modeNum]"
-      [keyClose]="_keyClose"
-      [position]="_POSITIONS[_positionNum]"
-      [dock]="_dock"
-      [dockedSize]="'70px'"
-      [autoCollapseHeight]="_autoCollapseHeight"
-      [autoCollapseWidth]="_autoCollapseWidth"
-      [closeOnClickOutside]="_closeOnClickOutside"
-      [closeOnClickBackdrop]="_closeOnClickBackdrop"
-      [showBackdrop]="_showBackdrop"
-      [animate]="_animate"
-      [trapFocus]="_trapFocus"
-      [autoFocus]="_autoFocus"
-      [sidebarClass]="'demo-sidebar'"
-      [ariaLabel]="'My sidebar'"
-      >
-      <div class="menu-btn" style="position: absolute; top: 0; right:0;">
-          <h1><button class="btn-large btn-flat" (click)="_toggleOpened()"><i class="material-icons menu-icon text-black">close</i></button></h1>
-      </div>
-      <div class="menu-btn">
-        <h3 class="brand-logo center">My <b class="text-accent">App</b></h3>
-      </div>
-      <hr>
-      <ul id="nav-mobile">
-        <li class="menu-route"><h5 class="no-margin"><i class="material-icons menu-icon route-icon">home</i>Home</h5></li>
-        <li class="menu-route"><h5 class="no-margin"><i class="material-icons menu-icon route-icon">person</i>Content</h5></li>
-      </ul>
-    </ng-sidebar>
-
-    <div ng-sidebar-content>
-        <nav>
-            <div class="nav-wrapper">
-              <div class="brand-logo center">My <b class="text-accent">App</b></div>
-              <ul id="nav-mobile" class="left">
-                  <li><a (click)="_toggleOpened()"><i class="material-icons menu-icon">menu</i></a></li>
-                </ul>
-              <ul id="nav-mobile" class="right">
-                <li><a><i class="material-icons menu-icon">person</i></a></li>
-              </ul>
+<div [ngStyle]="{'height': showMenu?'100%':'0%'}" class="overlay">
+  <i class="material-icons menu-icon closebtn" (click)="toogleMenu()">close</i>
+  <div class="overlay-content">
+    <div class="row">
+        <div class="col-lg-2">
+          <div class="container">
+            <a>Principal</a>
+          </div>
+        </div>
+        <div class="col-lg-10">
+          <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn btn-primary btn-large btn-menu" (click)="cargarEjemplos()"><i class="material-icons left">cloud</i><span class="btn-text">About</span></button></div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn btn-primary btn-large btn-menu" (click)="cargarEjemplos()"><i class="material-icons left">cloud</i><span class="btn-text">About</span></button></div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn btn-primary btn-large btn-menu" (click)="cargarEjemplos()"><i class="material-icons left">cloud</i><span class="btn-text">About</span></button></div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn btn-primary btn-large btn-menu" (click)="cargarEjemplos()"><i class="material-icons left">cloud</i><span class="btn-text">About</span></button></div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn btn-primary btn-large btn-menu" (click)="cargarEjemplos()"><i class="material-icons left">cloud</i><span class="btn-text">About</span></button></div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn btn-primary btn-large btn-menu" (click)="cargarEjemplos()"><i class="material-icons left">cloud</i><span class="btn-text">About</span></button></div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn btn-primary btn-large btn-menu" (click)="cargarEjemplos()"><i class="material-icons left">cloud</i><span class="btn-text">About</span></button></div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><button class="btn btn-primary btn-large btn-menu" (click)="cargarEjemplos()"><i class="material-icons left">cloud</i><span class="btn-text">About</span></button></div>
             </div>
-          </nav>
-
-        <div class="container">
-          <div style="text-align:center">
-            <h1>
-              Welcome to {{title}}!
-            </h1>
-            <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-            <h2>Here are some links to help you start: </h2>
-            <button class="btn btn-red" (click)="cargarEjemplos()">Ejemplo!</button>
-            <app-ejemplo [buscadosEjemplos]="buscadosEjemplos | async" [params]="params | async" [ejemplos]="ejemplos | async"></app-ejemplo>
           </div>
         </div>
     </div>
-    </ng-sidebar-container>
+    <!-- <div class="row">
+      <div class="col-sm-12 col-md-3 col-lg-2 btn-margin"><a>Principal</a></div>
+      <div class="col-sm-12 col-md-3 col-lg-2 btn-margin">
+      <button class="btn btn-primary btn-large btn-menu" (click)="cargarEjemplos()"><i class="material-icons left">cloud</i><span class="btn-text">About</span></button>
+      </div>
+      <div class="col-sm-12 col-md-3 col-lg-2 btn-margin">
+      <button class="btn btn-primary btn-large btn-menu" (click)="cargarEjemplos()"><i class="material-icons left">cloud</i><span class="btn-text">About</span></button>
+      </div>
+      <div class="col-sm-12 col-md-3 col-lg-2 btn-margin">
+      <button class="btn btn-primary btn-large btn-menu" (click)="cargarEjemplos()"><i class="material-icons left">cloud</i><span class="btn-text">About</span></button>
+      </div>
+      <div class="col-md-3 hidden-lg-up btn-margin"></div>
+      <div class="col-sm-12 col-md-3 col-lg-2 btn-margin">
+      <button class="btn btn-primary btn-large btn-menu" (click)="cargarEjemplos()"><i class="material-icons left">cloud</i><span class="btn-text">About</span></button>
+      </div>
+      <div class="hidden-md-down col-lg-2 btn-margin"></div>
+      <div class="hidden-md-down col-md-3 col-lg-2 btn-margin"></div>
+      <div class="col-sm-12 col-md-3 col-lg-2 btn-margin">
+      <button class="btn btn-primary btn-large btn-menu" (click)="cargarEjemplos()"><i class="material-icons left">cloud</i><span class="btn-text">About</span></button>
+      </div>
+      <div class="col-sm-12 col-md-3 col-lg-2 btn-margin">
+      <button class="btn btn-primary btn-large btn-menu" (click)="cargarEjemplos()"><i class="material-icons left">cloud</i><span class="btn-text">About</span></button>
+      </div>
+      <div class="col-sm-12 col-md-3 hidden-lg-up btn-margin"></div>
+      <div class="col-sm-12 col-md-3 col-lg-2 btn-margin">
+      <button class="btn btn-primary btn-large btn-menu" (click)="cargarEjemplos()"><i class="material-icons left">cloud</i><span class="btn-text">About</span></button>
+      </div>
+      <div class="col-sm-12 col-md-3 col-lg-2 btn-margin">
+        <button class="btn btn-primary btn-large btn-menu" (click)="cargarEjemplos()"><i class="material-icons left">cloud</i><span class="btn-text">About</span></button>
+      </div>
+      <div class="hidden-md-down col-lg-2 btn-margin"></div>
+      <div class="hidden-md-down col-md-3 col-lg-2 btn-margin"></div>
+      
+      <div class="col-md-3 col-lg-2 btn-margin">
+      <button class="btn btn-primary btn-large btn-menu" (click)="cargarEjemplos()"><i class="material-icons left">cloud</i><span class="btn-text">About</span></button>
+      </div>
+    </div> -->
+  </div>
+</div>
+
+<nav>
+  <div class="nav-wrapper">
+    <div class="brand-logo center">My <b class="text-accent">App</b></div>
+    <ul class="left">
+        <li><a (click)="toogleMenu()"><i class="material-icons menu-icon">menu</i></a></li>
+      </ul>
+    <ul class="right">
+      <li><a><i class="material-icons menu-icon">person</i></a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <div style="text-align:center">
+    <h1>
+      Welcome to {{title}}!
+    </h1>
+    <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+    <h2>Here are some links to help you start: </h2>
+    <button class="btn btn-red" (click)="cargarEjemplos()">Ejemplo!</button>
+    <app-ejemplo [buscadosEjemplos]="buscadosEjemplos | async" [params]="params | async" [ejemplos]="ejemplos | async"></app-ejemplo>
+  </div>
+</div>

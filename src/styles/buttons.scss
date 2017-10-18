@@ -10,7 +10,31 @@
     padding: 0 1rem;
 }
 
+.btn-large {
+    line-height: 54px;
+}
+
+.btn-menu {
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 2rem;
+}
+
+.btn-menu-lg {
+    width: 20vw;
+    height: 10vw;
+    margin: 2em 1em 2em 1em;
+}
+
+.btn-text {
+    margin-top: 4rem!important;
+}
+
 .btn-flat:focus, .btn-flat:active, .btn-flat:hover {
     background-color: transparent;
     outline: none;
+}
+
+.btn-margin {
+    margin-bottom: 2em;
 }

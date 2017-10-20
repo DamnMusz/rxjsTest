@@ -25,34 +25,27 @@
       </div>
       <hr>
       <ul id="nav-mobile">
-        <li class="menu-route"><h5 class="no-margin"><i class="material-icons menu-icon route-icon">home</i>Home</h5></li>
-        <li class="menu-route"><h5 class="no-margin"><i class="material-icons menu-icon route-icon">person</i>Content</h5></li>
+        <li class="menu-route" routerLink="home"><h5 class="no-margin"><i class="material-icons menu-icon route-icon">home</i>Home</h5></li>
+        <li class="menu-route" routerLink="content"><h5 class="no-margin"><i class="material-icons menu-icon route-icon">person</i>Content</h5></li>
       </ul>
     </ng-sidebar>
 
     <div ng-sidebar-content>
         <nav>
-            <div class="nav-wrapper">
-              <div class="brand-logo center">My <b class="text-accent">App</b></div>
-              <ul id="nav-mobile" class="left">
-                  <li><a (click)="_toggleOpened()"><i class="material-icons menu-icon">menu</i></a></li>
-                </ul>
-              <ul id="nav-mobile" class="right">
-                <li><a><i class="material-icons menu-icon">person</i></a></li>
+          <div class="nav-wrapper">
+            <div class="brand-logo center">My <b class="text-accent">App</b></div>
+            <ul id="nav-mobile" class="left">
+                <li><a (click)="_toggleOpened()"><i class="material-icons menu-icon">menu</i></a></li>
               </ul>
-            </div>
-          </nav>
+            <ul id="nav-mobile" class="right">
+              <li routerLink="/home"><a><i class="material-icons menu-icon">person</i></a></li>
+              <li><a><i class="material-icons menu-icon">chat_bubble</i></a></li>
+            </ul>
+          </div>
+        </nav>
 
         <div class="container">
-          <div style="text-align:center">
-            <h1>
-              Welcome to {{title}}!
-            </h1>
-            <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-            <h2>Here are some links to help you start: </h2>
-            <button class="btn btn-red" (click)="cargarEjemplos()">Ejemplo!</button>
-            <app-ejemplo [buscadosEjemplos]="buscadosEjemplos | async" [params]="params | async" [ejemplos]="ejemplos | async"></app-ejemplo>
-          </div>
+          <router-outlet></router-outlet>
         </div>
     </div>
     </ng-sidebar-container>

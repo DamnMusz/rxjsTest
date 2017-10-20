@@ -1,0 +1,30 @@
+<ng-sidebar
+[(opened)]="_opened"
+[mode]="_MODES[_modeNum]"
+[keyClose]="_keyClose"
+[position]="_POSITIONS[_positionNum]"
+[dock]="_dock"
+[dockedSize]="'70px'"
+[autoCollapseHeight]="_autoCollapseHeight"
+[autoCollapseWidth]="_autoCollapseWidth"
+[closeOnClickOutside]="_closeOnClickOutside"
+[closeOnClickBackdrop]="_closeOnClickBackdrop"
+[showBackdrop]="_showBackdrop"
+[animate]="_animate"
+[trapFocus]="_trapFocus"
+[autoFocus]="_autoFocus"
+[sidebarClass]="'demo-sidebar'"
+[ariaLabel]="'My sidebar'"
+>
+<div class="menu-btn" style="position: absolute; top: 0; right:0;">
+    <h1><button class="btn-large btn-flat" (click)="_toggleOpened()"><i class="material-icons menu-icon text-black">close</i></button></h1>
+</div>
+<div class="menu-btn">
+  <h3 class="brand-logo center">My <b class="text-accent">App</b></h3>
+</div>
+<hr>
+<ul id="nav-mobile">
+  <li class="menu-route"><h5 class="no-margin"><i class="material-icons menu-icon route-icon">home</i>Home</h5></li>
+  <li class="menu-route"><h5 class="no-margin"><i class="material-icons menu-icon route-icon">person</i>Content</h5></li>
+</ul>
+</ng-sidebar>

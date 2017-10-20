@@ -1,17 +1,12 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  selector: 'app-my-sidebar',
+  templateUrl: './my-sidebar.component.html',
+  styleUrls: ['./my-sidebar.component.scss']
 })
-export class AppComponent {
-  constructor() { }
-
-  ngOnInit(): void { }
-
-  private _opened: boolean = false;
+export class MySidebarComponent implements OnInit {
+  @Input() _opened: boolean = false;
   private _modeNum: number = 0;
   private _positionNum: number = 0;
   private _dock: boolean = false;
@@ -27,6 +22,11 @@ export class AppComponent {
 
   private _MODES: Array<string> = ['over', 'push', 'slide'];
   private _POSITIONS: Array<string> = ['left', 'right', 'top', 'bottom'];
+
+  constructor() { }
+  
+  ngOnInit() {
+  }
 
   private _toggleOpened(): void {
     this._opened = !this._opened;

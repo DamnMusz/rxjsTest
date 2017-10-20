@@ -1,9 +1,10 @@
+<button class="btn btn-red" (click)="cargarEjemplos()">Ejemplo!</button>
 <div class="row">
   <div class="col-xs-12 container">
-    <div *ngIf="buscadosEjemplos">
+    <div *ngIf="buscadosEjemplos | async">
       <div *ngIf="ejemplos && ejemplos.length>0; else loading">
           <h3>Estos son los ejemplos</h3>
-          <div *ngFor="let ejemplo of ejemplos">
+          <div *ngFor="let ejemplo of ejemplos | async">
               {{ejemplo.data}}
           </div>
       </div>

@@ -55,7 +55,7 @@ demo {
   box-shadow: 0 5px 15px 0px rgba(0,0,0,.44);
   min-width: 25em;
   font-size: 0.8em;
-  background-image: url('../assets/img/sidebar-background.png');
+  // background-image: url('../assets/img/sidebar-background.png');
 
   &.ng-sidebar--opened.ng-sidebar--over {
     box-shadow: 0 0 2.5em rgba(85, 85, 85, 0.5);
@@ -85,8 +85,11 @@ nav .brand-logo, nav .menu-icon {
 }
 
 nav {
-  background-color: #EEEEEE;
-  box-shadow: none;
+  // background-color: #EEEEEE;
+  // box-shadow: none;
+  background-color: #FAFAFA;
+  -webkit-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
   z-index: 9999;
 }
 

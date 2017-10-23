@@ -11,14 +11,11 @@ import * as fromRoot from '../../reducers';
   styleUrls: ['./ejemplo.component.css']
 })
 export class EjemploComponent implements OnInit {
-  @Input() params: Observable<string>;
-  @Input() buscadosEjemplos: Observable<boolean>;
-  @Input() ejemplos: Observable<Ejemplo[]>;
+  public params: Observable<string>;
+  public buscadosEjemplos: Observable<boolean>;
+  public ejemplos: Observable<Ejemplo[]>;
 
-  constructor(private store: Store<fromRoot.State>) {
-    this.params = store.select(fromRoot.selectParams);
-    this.buscadosEjemplos = store.select(fromRoot.selectBuscadosEjemplos);
-    this.ejemplos = store.select(fromRoot.selectEjemplos);    
+  constructor(private store: Store<fromRoot.State>) {        
   }
   
   cargarEjemplos(params: string): void {
@@ -26,6 +23,9 @@ export class EjemploComponent implements OnInit {
   }
 
   ngOnInit() { 
+    this.params = this.store.select(fromRoot.selectParams);
+    this.buscadosEjemplos = this.store.select(fromRoot.selectBuscadosEjemplos);
+    this.ejemplos = this.store.select(fromRoot.selectEjemplos);
     setInterval(function() {
       console.log(this.ejemplos);
     }, 2000);

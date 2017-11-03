@@ -22,3 +22,11 @@ body {
 .no-margin {
     margin: 0;
 }
+
+.container {
+    padding-top: 20px;
+}
+
+.touchable {
+    cursor: pointer;
+}

@@ -15,6 +15,9 @@ const initialState: State = {
 
 export function reducer(state = initialState, action: MyActions.All): State {
     switch (action.type) {
+        case MyActions.ACTION_RESET: {
+            return initialState;
+        }
         case MyActions.ACTION_PERFORMED: {
             return {
                 ...state,

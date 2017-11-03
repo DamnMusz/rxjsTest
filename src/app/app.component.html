@@ -30,16 +30,77 @@
       </ul>
     </ng-sidebar>
 
+    <ng-sidebar
+      [(opened)]="_opened2"
+      [mode]="_MODES2[_modeNum2]"
+      [keyClose]="_keyClose2"
+      [position]="_POSITIONS2[_positionNum2]"
+      [dock]="_dock2"
+      [dockedSize]="'70px'"
+      [autoCollapseHeight]="_autoCollapseHeight2"
+      [autoCollapseWidth]="_autoCollapseWidth2"
+      [closeOnClickOutside]="_closeOnClickOutside2"
+      [closeOnClickBackdrop]="_closeOnClickBackdrop2"
+      [showBackdrop]="_showBackdrop2"
+      [animate]="_animate2"
+      [trapFocus]="_trapFocus2"
+      [autoFocus]="_autoFocus2"
+      [sidebarClass]="'demo-sidebar demo-sidebar2'"
+      [ariaLabel]="'My sidebar'"
+      >
+      <div class="menu-btn" style="position: absolute; top: 0; right:0;">
+          <h1><button class="btn-large btn-flat" (click)="_toggleOpened2()"><i class="material-icons menu-icon text-black">close</i></button></h1>
+      </div>
+      <div class="menu-btn">
+        <h3 class="brand-logo center"><b class="text-accent">Usuario</b></h3>
+      </div>
+      <hr>
+      <ul id="nav-mobile">
+        <li class="menu-route" routerLink="home"><h5 class="no-margin"><i class="material-icons menu-icon route-icon">person</i>Ver Perfil</h5></li>
+        <li class="menu-route" routerLink="content"><h5 class="no-margin"><i class="material-icons menu-icon route-icon">power_settings_new</i>Cerrar Sesión</h5></li>
+      </ul>
+    </ng-sidebar>
+
+    <ng-sidebar
+      [(opened)]="_opened3"
+      [mode]="_MODES2[_modeNum2]"
+      [keyClose]="_keyClose2"
+      [position]="_POSITIONS2[_positionNum2]"
+      [dock]="_dock2"
+      [dockedSize]="'70px'"
+      [autoCollapseHeight]="_autoCollapseHeight2"
+      [autoCollapseWidth]="_autoCollapseWidth2"
+      [closeOnClickOutside]="_closeOnClickOutside2"
+      [closeOnClickBackdrop]="_closeOnClickBackdrop2"
+      [showBackdrop]="_showBackdrop2"
+      [animate]="_animate2"
+      [trapFocus]="_trapFocus2"
+      [autoFocus]="_autoFocus2"
+      [sidebarClass]="'demo-sidebar demo-sidebar2'"
+      [ariaLabel]="'My sidebar'"
+      >
+      <div class="menu-btn" style="position: absolute; top: 0; right:0;">
+          <h1><button class="btn-large btn-flat" (click)="_toggleOpened3()"><i class="material-icons menu-icon text-black">close</i></button></h1>
+      </div>
+      <div class="menu-btn">
+        <h3 class="brand-logo center"><b class="text-accent">Chat</b></h3>
+      </div>
+      <hr>
+      <ul id="nav-mobile">
+        <li class="menu-route" routerLink="home"><h5 class="no-margin"><i class="material-icons menu-icon route-icon">chat_bubble</i>Ver Chat</h5></li>
+      </ul>
+    </ng-sidebar>
+
     <div ng-sidebar-content>
         <nav>
           <div class="nav-wrapper">
-            <div class="brand-logo center">My <b class="text-accent">App</b></div>
+            <div class="brand-logo center touchable" routerLink="home">My <b class="text-accent">App</b></div>
             <ul id="nav-mobile" class="left">
                 <li><a (click)="_toggleOpened()"><i class="material-icons menu-icon">menu</i></a></li>
-              </ul>
+            </ul>
             <ul id="nav-mobile" class="right">
-              <li><a><i class="material-icons menu-icon">chat_bubble</i></a></li>
-              <li routerLink="/home"><a><i class="material-icons menu-icon">person</i></a></li>
+              <li><a (click)="_toggleOpened3()"><i class="material-icons menu-icon">chat_bubble</i></a></li>
+              <li><a (click)="_toggleOpened2()"><i class="material-icons menu-icon">person</i></a></li>
             </ul>
           </div>
         </nav>

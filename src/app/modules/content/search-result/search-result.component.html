@@ -1,0 +1,9 @@
+<div class="col-xs-12">
+    <h3 *ngIf="!((ejemplos | async) > -1);" >Estos son los ejemplos</h3>
+    <div *ngFor="let ejemplo of ejemplos | async">
+        {{ejemplo.data}}
+    </div>
+    <div *ngIf="((ejemplos | async) > -1) && buscadosEjemplos | async">
+      <h3>Cargando ejemplos...</h3>
+    </div>
+</div>
